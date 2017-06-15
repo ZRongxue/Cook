@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="css/we.css"/>
+<div class="L_Webox" style="padding-bottom: 20px">
+    <div class="L_Webanner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" ng-repeat="weBanner in myWeBanner"><img ng-src="{{weBanner.img}}" alt=""/></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="L_WeContent">
+        <ul class="L_WeNav">
+            <li class="L_WeActive">店铺介绍</li>
+            <li>建议留言</li>
+        </ul>
+        <ul class="L_WeTab">
+            <li class="L_jieshao" style="padding-bottom: 55px">
+                <p>
+                    妈妈厨房是一家24小时经营以港式粤菜为基础的中西融合菜，
+                    特聘香港融合菜大师主理，打造新派主题时尚餐厅。
+                    它专业的厨师团队，开发和研究新派融合菜，定期推出特色菜品，
+                    聘请专业艺术团队研发造型，让茉莉每一款菜品成为一件艺术品，
+                    让客人感受别样的饮食文化。
+                </p>
+                <hr>
+                <iframe src="content/map/map.html" width="100%" height="100%"></iframe>
+            </li>
+            <li class="L_liuyan">
+                <input type="text" placeholder="姓名" class="tab-input"/>
+                <input type="text" placeholder="电话" class="tab-input"/>
+                <textarea placeholder="建议" class="tab-input"></textarea>
+                <button type="button" class="tab-btn">提交</button>
+            </li>
+        </ul>
+
+
+    </div>
+</div>

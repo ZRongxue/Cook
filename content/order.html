@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <meta name="description" content="厨房妈妈"/>
+    <meta name="keywords" content="厨房妈妈"/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../css/Lheader.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/order.css"/>
+    <link rel="stylesheet" href="../css/amazeui.min.css"/>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/angular-1.4.6.min.js"></script>
+</head>
+<body ng-controller="myctrl">
+<header class="L_YhgHeader">
+    <div class="L_YhgHeaderNav">
+        <a href="http://localhost:63342/month_8/Cook%20House/index.html#/wo" class="L_YhgHeaderRtn">
+            <span style="color: #333;" class="am-header-icon am-icon-angle-left"></span>
+        </a>
+        <a class="L_YhgHeaderTitle" style="color: #333;">全部订单</a>
+    </div>
+</header>
+<div class="z_search">
+    <input type="text" placeholder="搜索全部订单" ng-model="name">
+</div>
+<ul class="L_OrderNav">
+    <li class="L_OrderNavActive"><a>全部</a></li>
+    <li><a>待付款</a></li>
+    <li><a>待收货</a></li>
+    <li><a>待评价</a></li>
+    <li><a>退换货</a></li>
+</ul>
+<div>
+    <ul class="L_OrderUl" style="display: block">
+        <li ng-repeat="list in mylist">
+            <div class="L_OrderTop">
+                <span>订单编号: {{list.number}}</span>
+                <span class="L_OrderTopSuc" ng-bind="list.status"></span>
+            </div>
+            <div class="L_OrderList" style="border: 0;">
+                <a class="hui">
+                    <div class="left"><img ng-src="{{list.img}}"></div>
+                    <div class="center">
+                        <p ng-bind="list.name"></p>
+                        <div>
+                            <p class="price orange" ng-bind="list.price | currency:'￥' "></p>
+                            <p class="right">x{{list.num}}</p>
+                        </div>
+                        <p>合计：<span class="orange" ng-bind="list.zongjia"></span></p>
+                    </div>
+                </a>
+                <div class="heji">共{{list.num}}个商品 实付金额：<span ng-bind="list.zongjia"></span></div>
+                <div class="btn">
+                    <a class="{{list.zhifu}}" ng-bind="list.myzhifu"></a>
+                    <a class="{{list.quxiao}}" ng-bind="list.myquxiao"></a>
+                    <a class="{{list.pingjia}}" ng-bind="list.mypingjia"></a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </li>
+    </ul>
+    <ul class="L_OrderUl">
+        <li ng-repeat="list in mylistDaiFu">
+            <div class="L_OrderTop">
+                <span>订单编号: {{list.number}}</span>
+                <span class="L_OrderTopSuc" ng-bind="list.status"></span>
+            </div>
+            <div class="L_OrderList" style="border: 0;">
+                <a class="hui">
+                    <div class="left"><img ng-src="{{list.img}}"></div>
+                    <div class="center">
+                        <p ng-bind="list.name"></p>
+                        <div>
+                            <p class="price orange" ng-bind="list.price | currency:'￥' "></p>
+                            <p class="right">x{{list.num}}</p>
+                        </div>
+                        <p>合计：<span class="orange" ng-bind="list.zongjia"></span></p>
+                    </div>
+                </a>
+                <div class="heji">共{{list.num}}个商品 实付金额：<span ng-bind="list.zongjia"></span></div>
+                <div class="btn">
+                    <a class="{{list.zhifu}}" ng-bind="list.myzhifu"></a>
+                    <a class="{{list.quxiao}}" ng-bind="list.myquxiao"></a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </li>
+    </ul>
+    <ul class="L_OrderUl">
+        <li ng-repeat="list in mylistDaiShou">
+            <div class="L_OrderTop">
+                <span>订单编号: {{list.number}}</span>
+                <span class="L_OrderTopSuc" ng-bind="list.status"></span>
+            </div>
+            <div class="L_OrderList" style="border: 0;">
+                <a class="hui">
+                    <div class="left"><img ng-src="{{list.img}}"></div>
+                    <div class="center">
+                        <p ng-bind="list.name"></p>
+                        <div>
+                            <p class="price orange" ng-bind="list.price | currency:'￥' "></p>
+                            <p class="right">x{{list.num}}</p>
+                        </div>
+                        <p>合计：<span class="orange" ng-bind="list.zongjia"></span></p>
+                    </div>
+                </a>
+                <div class="heji">共{{list.num}}个商品 实付金额：<span ng-bind="list.zongjia"></span></div>
+                <div class="btn">
+                    <a class="{{list.zhifu}}" ng-bind="list.myzhifu"></a>
+                    <a class="{{list.quxiao}}" ng-bind="list.myquxiao"></a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </li>
+    </ul>
+    <ul class="L_OrderUl">
+        <li ng-repeat="list in mylistDaiPing">
+            <div class="L_OrderTop">
+                <span>订单编号: {{list.number}}</span>
+                <span class="L_OrderTopSuc" ng-bind="list.status"></span>
+            </div>
+            <div class="L_OrderList" style="border: 0;">
+                <a class="hui">
+                    <div class="left"><img ng-src="{{list.img}}"></div>
+                    <div class="center">
+                        <p ng-bind="list.name"></p>
+                        <div>
+                            <p class="price orange" ng-bind="list.price | currency:'￥' "></p>
+                            <p class="right">x{{list.num}}</p>
+                        </div>
+                        <p>合计：<span class="orange" ng-bind="list.zongjia"></span></p>
+                    </div>
+                </a>
+                <div class="heji">共{{list.num}}个商品 实付金额：<span ng-bind="list.zongjia"></span></div>
+                <div class="btn">
+                    <a class="{{list.pingjia}}" ng-bind="list.mypingjia"></a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </li>
+    </ul>
+    <ul class="L_OrderUl">
+        <li>
+            <div class="L_OrderBj">
+                <img src="../img/none.png" />
+                <p>您当前没有此状类订单</p>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    $(".L_OrderNav li").click(function(){
+        var index = $(this).index();
+        $(this).addClass("L_OrderNavActive").siblings().removeClass("L_OrderNavActive");
+        $(".L_OrderUl").eq(index).show().siblings().hide()
+    })
+    var app = angular.module("app",[]);
+    app.controller("myctrl", function ($scope) {
+        $scope.mylist = [
+            {"number":"150916517682","status":"待付款","name":"卤香滑鸡","img":"../img/detail.png","price":"88","zongjia":"￥176","num":"2","zhifu":"a","myzhifu":"立即支付","quxiao":"a","myquxiao":"取消订单"},
+            {"number":"150945689535","status":"卖家已发货","name":"啤酒炖鸡","img":"../img/cai7.jpg","price":"88","zongjia":"￥176","num":"2","zhifu":"a","myzhifu":"确认付款"},
+            {"number":"150548763213","status":"待付款","name":"香辣炸鸡翅","img":"../img/cai2.jpg","price":"88","zongjia":"￥176","num":"2","zhifu":"a","myzhifu":"立即支付","quxiao":"a","myquxiao":"取消订单"},
+            {"number":"150548763213","status":"待评价","name":"糖醋里脊","img":"../img/cai11.jpg","price":"88","zongjia":"￥176","num":"2","pingjia":"a","mypingjia":"待评价"}
+
+        ]
+        $scope.mylistDaiFu = [
+            {"number":"150916517682","status":"待付款","name":"卤香滑鸡","img":"../img/detail.png","price":"88","zongjia":"￥176","num":"2","zhifu":"a","myzhifu":"立即支付","quxiao":"a","myquxiao":"取消订单"},
+            {"number":"150548763213","status":"待付款","name":"香辣炸鸡翅","img":"../img/cai2.jpg","price":"88","zongjia":"￥176","num":"2","zhifu":"a","myzhifu":"立即支付","quxiao":"a","myquxiao":"取消订单"}
+        ]
+        $scope.mylistDaiShou = [
+            {"number":"150945689535","status":"卖家已发货","name":"啤酒炖鸡","img":"../img/cai7.jpg","price":"88","zongjia":"￥176","num":"2","zhifu":"a","myzhifu":"确认付款"}
+        ]
+        $scope.mylistDaiPing = [
+            {"number":"150548763213","status":"待评价","name":"糖醋里脊","img":"../img/cai11.jpg","price":"88","zongjia":"￥176","num":"2","pingjia":"a","mypingjia":"待评价"}
+
+        ]
+
+    })
+</script>
+</html>

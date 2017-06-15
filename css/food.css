@@ -1,0 +1,151 @@
+.z_box {
+    width: 100%;
+    padding-bottom: 28px;
+}
+
+.z_box .nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+.z_box .nav ul {
+    width: 100%;
+}
+
+.z_box .nav ul li {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.z_box .nav ul li a {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.z_box .nav ul li input {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.7);
+    line-height: 3rem;
+    font-size: 1.6rem;
+    text-indent: 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.z_box .nav ul li input::-webkit-input-placeholder {
+    color: #666;
+}
+
+.z_box .z_banner {
+    width: 100%;
+}
+
+.z_box .z_banner img {
+    width: 100%;
+}
+
+.z_box .z_list {
+    width: 100%;
+    background: #FAFAFA;
+    padding: 2% 0;
+}
+
+.z_box .z_list ul {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.z_box .z_list ul li {
+    width: 23%;
+    margin: 1%;
+    text-align: center;
+}
+
+.z_box .z_list ul li a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.z_box .z_list ul li a img {
+    width: 60%;
+}
+
+.z_box .z_list ul li a p {
+    font-size: 1.3rem;
+}
+
+.z_box .z_food {
+    width: 100%;
+}
+
+.z_box .z_food .z_title {
+    width: 100%;
+    padding: 2%;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.z_box .z_food .z_title span {
+    font-size: 18px;
+    font-weight: 500;
+    float: left;
+    color: #FF6600;
+    text-indent: 0.5rem;
+    display: inline-block;
+    border-left: 3px solid #FF6600;
+}
+
+.z_box .z_food .z_title a {
+    float: right;
+    color: #FF6600;
+}
+
+.z_box .z_food_list {
+    width: 100%;
+}
+
+.z_box .z_food_list ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+
+.z_box .z_food_list ul li {
+    width: 48%;
+    margin: 1%;
+}
+
+.z_box .z_food_list ul li a img {
+    width: 100%;
+}
+
+.z_box .z_food_list ul li a p {
+    margin: 2% 0;
+}
+
+.z_box .z_food_list ul li a p:nth-of-type(1) {
+    font-size: 1.3rem;
+    color: #333333;
+}
+
+.z_box .z_food_list ul li a p:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.z_box .z_food_list ul li a p:nth-of-type(2) span:nth-of-type(1) {
+    color: #FF6600;
+    font-size: 1.3rem;
+}
+
+.z_box .z_food_list ul li a p:nth-of-type(2) span:nth-of-type(2) {
+    color: #666666;
+}
+
+/*# sourceMappingURL=food.css.map */

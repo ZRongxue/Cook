@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title></title>
+    <link href="../css/amazeui.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/base.css" type="text/css" rel="stylesheet">
+    <link href="../css/menu.css" type="text/css" rel="stylesheet">
+    <link href="../css/search.css" type="text/css" rel="stylesheet">
+    <script src="../js/angular.js" type="text/javascript"></script>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="z_box" ng-controller="myCtrl">
+    <div class="z_head clearfix">
+        <a href="../index.html#/speak">
+            <i class="am-header-icon am-icon-angle-left"></i>
+        </a>
+        <h3>厨艺交流</h3>
+    </div>
+    <div class="z_menu">
+        <ul>
+            <li ng-repeat="item in list">
+                <a href="{{item.href}}.html">
+                    <div><img ng-src="{{item.img}}"></div>
+                    <div>
+                        <p ng-bind="item.name"></p>
+                        <p>
+                            <span ng-bind="item.info" class="huan" style="color: #666"></span>
+                            <span>详情》</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function ($scope) {
+        $scope.list = [
+            {"img":"../img/cai1.jpg","name":"四色牛油果蟹肉沙律","info":"自问是一个生果王，尤其喜爱'牛油果'，这个沙律很简易，色彩缤纷，每次宴客都会用作头盘，绝不失礼。","href":"detail1"},
+            {"img":"../img/cai2.jpg","name":"香辣炸鸡翅","info":"以前炸鸡翅，都是用面包糠来做的。最近这段时间，找到一个新的方法，省去了面包糠这一步，反而味道更好了。","href":"detail2"},
+            {"img":"../img/cai3.jpg","name":"凉拌马齿苋","info":"焯熟的马齿苋放入冰水中可以让马齿苋的颜色保持翠绿，同时稳定形状","href":"detail3"},
+            {"img":"../img/cai4.jpg","name":" 菠萝喼汁排骨","info":"菠萝入菜很美味，很下饭，酸酸甜甜的，但有些朋友会感觉菠萝吃起来嘴会痒","href":"detail4"},
+            {"img":"../img/cai5.jpg","name":"香辣火锅底料炒制方法","info":"除了辣椒和花椒这两位主角之外，还有几样香料是要加的：八角、茴香、香草、香叶、丁香、孜然、草果。","href":"detail1"},
+            {"img":"../img/cai6.jpg","name":"私房排骨汤","info":"排骨裹淀粉的时候，慢慢增加红薯淀粉的量，不要一次性加太多，淀粉太多太厚，吃起来影响口感，恰到好处最好","href":"detail2"},
+            {"img":"../img/cai7.jpg","name":"啤酒炖鸡","info":"啤酒煮肉和土豆都很美味，无论是煮牛肉、鸭子、鸡和土豆，十分正货，所以，特意买了只约2磅的鸡放啤酒煮，那个美味就不用说了。","href":"detail3"},
+            {"img":"../img/cai8.jpg","name":"辣麻鸡腿","info":"大种鸡冰冻鸡有股腥味，要下重料来对付，最近学西人用Paprika（红椒粉，色红，不辣）和 Cayenne（辣椒粉，辣味）辣椒粉来做挂糊，使成品色泽较为深红、其皮肤成古铜色，好健美，呵呵。","href":"detail4"},
+            {"img":"../img/cai9.jpg","name":"鸡丝凉面","info":"每年夏天，最受欢迎的就是凉面、凉粉、凉皮这些了。鸡丝凉面吃起来面条筋道，肉丝鲜香，再搭配上口味丰富的料汁，绝对是夏季餐桌上的佳品。","href":"detail4"},
+            {"img":"../img/cai10.jpg","name":"凉爽西瓜西米露","info":"将西米放入小锅里煮熟，要一边煮一边用勺子搅拌，否则西米会粘锅底。","href":"detail4"},
+            {"img":"../img/cai11.jpg","name":"糖醋里脊","info":"腌制好的里脊肉上生粉时候稍稍要有点耐心，滚过生粉之后再抖抖，抖掉表面的生粉 ","href":"detail4"},
+        ]
+    })
+</script>
+</html>

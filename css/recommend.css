@@ -1,0 +1,31 @@
+.z_tuijian {
+  width: 100%; }
+  .z_tuijian ul {
+    width: 100%;
+    margin: 0; }
+    .z_tuijian ul li {
+      width: 100%;
+      padding: 2%; }
+      .z_tuijian ul li a {
+        width: 100%;
+        display: flex; }
+        .z_tuijian ul li a div:nth-of-type(1) {
+          width: 22%; }
+          .z_tuijian ul li a div:nth-of-type(1) img {
+            width: 100%; }
+        .z_tuijian ul li a div:nth-of-type(2) {
+          width: 78%;
+          padding: 0 3%; }
+          .z_tuijian ul li a div:nth-of-type(2) p:nth-of-type(1) {
+            font-size: 1.8rem;
+            color: #333333; }
+          .z_tuijian ul li a div:nth-of-type(2) p:nth-of-type(2) {
+            display: flex;
+            justify-content: space-between; }
+            .z_tuijian ul li a div:nth-of-type(2) p:nth-of-type(2) span:nth-of-type(1) {
+              color: #FF6600;
+              font-size: 1.5rem; }
+            .z_tuijian ul li a div:nth-of-type(2) p:nth-of-type(2) span:nth-of-type(2) {
+              color: #666666; }
+
+/*# sourceMappingURL=recommend.css.map */

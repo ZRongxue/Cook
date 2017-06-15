@@ -1,0 +1,81 @@
+.L_HealthContent {
+  font-family: "Microsoft YaHei";
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border: 0;
+  background: white;
+}
+.L_HealthContent .L_HealthTitle {
+  overflow: hidden;
+}
+.L_HealthContent .L_HealthTitle img {
+  float: left;
+  margin-right: 15px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: 15px;
+  vertical-align: bottom;
+}
+.L_HealthContent .L_HealthTitle div p {
+  margin: 0;
+  padding: 0;
+}
+.L_HealthContent .L_HealthTitle div .title {
+  font-size: 16px;
+  color: #0e0e0e;
+  margin-bottom: 0px;
+}
+.L_HealthContent .L_HealthTitle div .huati {
+  color: #a3a3a3;
+  font-weight: 100;
+}
+.L_HealthContent .L_HealthTitle div .huati .red {
+  margin: 0 10px;
+  color: red;
+}
+.L_HealthContent .L_HealthList {
+  border-top: 1px solid #f3f3f3;
+  height: 41px;
+  white-space: nowrap;
+  overflow: auto;
+  margin-top: 2%;
+}
+.L_HealthContent .L_HealthList a {
+  text-decoration: none;
+  color: #ff6767 !important;
+  border-bottom: 1px solid #ff6767 !important;
+  display: inline-block;
+  width: 65px;
+  text-align: center;
+  line-height: 40px;
+  overflow: hidden;
+}
+
+.L_HealthBj {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+.L_HealthBj img {
+  width: 50%;
+}
+
+.L_HealthFt button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ff6767;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 45px;
+  box-shadow: 0px 2px 6px #949494;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+}
+
+/*# sourceMappingURL=health.css.map */

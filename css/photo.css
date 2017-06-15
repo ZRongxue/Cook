@@ -1,0 +1,22 @@
+.z_photo {
+  width: 100%; }
+  .z_photo ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0; }
+    .z_photo ul li {
+      width: 48%;
+      margin: 1%; }
+      .z_photo ul li a {
+        width: 100%; }
+        .z_photo ul li a div {
+          width: 100%; }
+          .z_photo ul li a div img {
+            width: 100%; }
+        .z_photo ul li a p {
+          width: 100%;
+          font-size: 1.4rem;
+          text-align: center; }
+
+/*# sourceMappingURL=photo.css.map */

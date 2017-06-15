@@ -1,0 +1,37 @@
+.z_head {
+  width: 100%;
+  padding: 0 5%;
+  background: white; }
+  .z_head a {
+    float: left;
+    font-size: 2.8rem; }
+  .z_head h3 {
+    float: left;
+    font-size: 1.8rem;
+    color: #333333;
+    font-weight: 400;
+    margin: 0 34%;
+    line-height: 4rem; }
+
+.z_search {
+  width: 100%;
+  padding: 6% 4%;
+  background: #FAFAFA; }
+  .z_search input {
+    width: 100%;
+    background: white;
+    line-height: 3rem;
+    font-size: 1.6rem;
+    text-indent: 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 5px; }
+
+.z_type {
+  width: 100%;
+  padding: 4%;
+  background: white; }
+  .z_type a {
+    font-size: 1.8rem;
+    margin-right: 5%; }
+
+/*# sourceMappingURL=search.css.map */

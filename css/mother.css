@@ -1,0 +1,39 @@
+.z_mo{
+    width: 100%;
+}
+.z_mo ul{
+    width: 100%;
+}
+.z_mo ul li{
+    width: 100%;
+    padding: 2%;
+    border-bottom: 1px solid #ededed;
+}
+.z_mo ul li a{
+    width: 100%;
+    display: flex;
+}
+.z_mo ul li a>div:nth-of-type(1){
+    width: 14%;
+}
+.z_mo ul li a div:nth-of-type(1) img{
+    width: 100%;
+}
+.z_mo ul li a div:nth-of-type(2){
+    width: 86%;
+    padding: 0 2%;
+}
+.z_mo ul li a div:nth-of-type(2) p:nth-of-type(2){
+    font-weight: 700;
+}
+.mo_img{
+    width: 100%;
+    display: flex;
+}
+.mo_img span{
+    width: 23%;
+    margin: 1%;
+}
+.mo_img span img{
+    width: 100%;
+}

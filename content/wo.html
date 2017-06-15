@@ -1,0 +1,20 @@
+<link href="css/wo.css" rel="stylesheet">
+<div class="z_box">
+    <div class="z_head_mes" ng-repeat="item in data.wo[0].head">
+        <div>
+            <img ng-src="{{item.img}}">
+        </div>
+        <div>
+            <p ng-bind="item.info"></p>
+        </div>
+    </div>
+    <div class="z_mes">
+        <ul>
+            <li ng-repeat="item in data.wo[0].mes">
+                <a href="{{item.href}}.html">
+                    <i class="{{item.class}}"></i><span ng-bind="item.text"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title></title>
+    <link href="../css/amazeui.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/base.css" type="text/css" rel="stylesheet">
+    <link href="../css/mother.css" type="text/css" rel="stylesheet">
+    <link href="../css/search.css" type="text/css" rel="stylesheet">
+    <script src="../js/angular.js" type="text/javascript"></script>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="z_box" ng-controller="myCtrl">
+    <div class="z_head clearfix">
+        <a href="../index.html#/speak">
+            <i class="am-header-icon am-icon-angle-left"></i>
+        </a>
+        <h3>妈妈派</h3>
+    </div>
+    <div class="z_mo">
+        <ul>
+            <li ng-repeat="item in list">
+                <a href="{{item.href}}.html">
+                    <div><img ng-src="{{item.head}}" class="img-circle"></div>
+                    <div>
+                        <p ng-bind="item.name"></p>
+                        <small class="text-muted" ng-bind="item.time"></small>
+                        <p ng-bind="item.tit"></p>
+                        <p ng-bind="item.info" class="huan"></p>
+                        <div class="mo_img">
+                            <span ng-repeat="img in item.con_img">
+                                <img ng-src="{{img.img}}">
+                            </span>
+
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function ($scope) {
+        $scope.list = [
+            {"head":"../img/photo1.jpg","name":"老方小雨","time":"2017-06-10","tit":"照烧鸡腿饭~~~盖浇饭中的经典菜单","info":"照烧：知名日本菜肴及烹饪方法。通常是指于烧烤肉品过程中，外层涂抹大量酱油，糖水，大蒜，姜与清酒（或味醂）。传至欧美国家后，该烹饪方法经改良，口味较淡，而中国大陆、香港、台湾与韩国的照烧肉品则口味较重。所用的照烧汁可称作烧肉酱或照烧酱。","href":"detail1","con_img":[{"img":"../img/mm1.jpg"},{"img":"../img/mm2.jpg"},{"img":"../img/mm3.jpg"},{"img":"../img/mm4.jpg"}]},
+            {"head":"../img/photo2.jpg","name":"萧雪闲云","time":"2017-06-07","tit":"","info":"#依家早餐# 面包，杂粮粥，自制酸奶，苹果。我承认今天的照片拍的不好，可是依呀说我刺猬做得不像我不服啊😂","href":"detail1","con_img":[{"img":"../img/mm5.jpg"},{"img":"../img/mm6.jpg"},{"img":"../img/mm7.jpg"},{"img":"../img/mm8.jpg"}]},
+            {"head":"../img/photo3.jpg","name":"长颈猫","time":"2017-05-27","tit":"睿睿的花样早餐","info":"睿睿的花样早餐来喽，今早给宝贝准备了三丝火腿奶酪饼、心形火腿蛋、银耳白粥,饭后水果是甜甜的青芒、库尔勒香梨、猕猴桃外加圣女果，节前最后一天，加油吧！","href":"detail1","con_img":[{"img":"../img/mm9.jpg"},{"img":"../img/mm11.jpg"},{"img":"../img/mm11.jpg"},{"img":"../img/mm12.jpg"}]},
+            {"head":"../img/photo5.jpg","name":"党丽","time":"2017-05-14","tit":"爱笑的宝妈","info":"清晨分享 　   唯有淡淡的生活， 才会有时间去思考， 去调整方向， 才能真正感悟生活的过程。 偷偷地幸福着，......","href":"detail1","con_img":[{"img":"../img/mm13.jpg"},{"img":"../img/mm14.jpg"},{"img":"../img/mm13.jpg"},{"img":"../img/mm14.jpg"}]},
+            {"head":"../img/photo5.jpg","name":"党丽","time":"2017-04-08","tit":"花吃～肉粽","info":"用早餐说爱你","href":"detail1","con_img":[{"img":"../img/mm15.jpg"},{"img":"../img/mm17.jpg"},{"img":"../img/mm17.jpg"}]},
+            {"head":"../img/photo5.jpg","name":"党丽","time":"2017-04-16","tit":"爱你就如你所愿！","info":"#ACA魔法立方料理大赛，我的立方型料理，造型独特更立体# ......","href":"detail1","con_img":[{"img":"../img/mm21.jpg"},{"img":"../img/mm22.jpg"}]},
+            {"head":"../img/photo3.jpg","name":"长颈猫","time":"2016-11-07","tit":"南方立冬之歌","info":"#早餐时刻# 11.7今天是立冬。 南方立冬东北风，冬季好......","href":"detail1","con_img":[{"img":"../img/mm18.jpg"},{"img":"../img/mm19.jpg"},{"img":"../img/mm20.jpg"}]}
+        ]
+    })
+</script>
+</html>

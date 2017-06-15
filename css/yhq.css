@@ -1,0 +1,51 @@
+.L_YhqContent {
+  width: 90%;
+  background: #fff;
+  margin: 40px auto;
+  border-radius: 5px;
+  position: relative;
+  padding-top: 40px;
+}
+.L_YhqContent .L_YhqConLogo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid #dcdcdc;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  margin-left: -31px;
+}
+.L_YhqContent .sub-title {
+  font-weight: normal;
+  font-size: 18px;
+  color: #777;
+}
+.L_YhqContent .title {
+  font-weight: normal;
+  color: #333;
+}
+.L_YhqContent .name {
+  padding-left: 10px;
+}
+.L_YhqContent .contact-wrap p {
+  border-top: 1px dashed #a3a3a3;
+  margin: 0;
+  padding: 1rem;
+}
+
+.L_YhqBtn {
+  text-align: center;
+}
+.L_YhqBtn .btn {
+  height: 45px;
+  width: 60%;
+  background: #ffd63c;
+  border: none;
+  border-radius: 10px;
+  line-height: 45px;
+  font-size: 18px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=yhq.css.map */

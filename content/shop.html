@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <meta name="description" content="厨房妈妈"/>
+    <meta name="keywords" content="厨房妈妈"/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../css/Lheader.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/shop.css"/>
+    <link rel="stylesheet" href="../css/amazeui.min.css"/>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/angular-1.4.6.min.js"></script>
+</head>
+<body ng-controller="myctrl">
+<header class="L_YhgHeader">
+    <div class="L_YhgHeaderNav">
+        <a href="http://localhost:63342/month_8/Cook%20House/index.html#/wo" class="L_YhgHeaderRtn">
+            <span style="color: #333;" class="am-header-icon am-icon-angle-left"></span>
+        </a>
+        <a class="L_YhgHeaderTitle" style="color: #333;">购物车</a>
+    </div>
+</header>
+
+<div>
+    <ul class="L_OrderUl" style="display: block">
+
+        <li ng-repeat="list in mylist">
+            <div class="clear1"></div>
+            <div class="L_OrderTop">
+                <span> {{list.number}}</span>
+                <span class="L_OrderTopSuc" ng-bind="list.status" ng-click="edit($index)"></span>
+            </div>
+            <div class="L_OrderList" style="border: 0;">
+                <div class="qianhui">
+                    <div class="mychebxo"><input type="checkbox" class="myche" ng-checked="list.ischecked" ng-click="singleCheck($index)"></div>
+                    <div class="left">
+                        <img ng-src="{{list.img}}" class="myIng">
+                    </div>
+                    <div class="center">
+                        <p ng-bind="list.name"></p>
+
+                        <div>
+                            <p class="price orange" ng-bind="list.price | currency:'￥' "></p>
+                            <p class="right">x{{list.num}}</p>
+                        </div>
+                        <div>
+                            <p class="fl">合计：<span class="orange" ng-bind="list.price*list.num | currency:'￥'"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="L_footer">
+        <label><input type="checkbox" class="qx"  ng-checked="isCheckAll" ng-click="checkall()"/> 全选</label>
+        <button class="fr">结算</button>
+    </div>
+</div>
+</body>
+<script>
+    $(".L_OrderNav li").click(function () {
+        var index = $(this).index();
+        $(this).addClass("L_OrderNavActive").siblings().removeClass("L_OrderNavActive");
+        $(".L_OrderUl").eq(index).show().siblings().hide()
+    });
+    var app = angular.module("app", []);
+    app.controller("myctrl", function ($scope) {
+        $scope.mylist = [
+            {
+                "number": "小小微",
+                "status": "删除",
+                "name": "卤香滑鸡",
+                "img": "../img/detail.png",
+                "price": 58,
+                "num": 2,
+                "ischecked": false
+            },
+            {
+                "number": "家常菜",
+                "status": "删除",
+                "name": "啤酒炖鸡",
+                "img": "../img/p2.png",
+                "price": 34,
+                "num": 1,
+                "ischecked": false
+            },
+            {
+                "number": "爱喝果汁",
+                "status": "删除",
+                "name": "虐狗情人杯",
+                "img": "../img/p1.png",
+                "price": 50,
+                "num": 1,
+                "ischecked": false
+            }
+        ]
+        //删除
+        $scope.edit = function (index) {
+            $scope.mylist.splice(index,1)
+        }
+        //全选
+        $scope.checkall =function(){
+            //点击一次取反
+            $scope.isCheckAll = !$scope.isCheckAll;
+            //遍历赋值
+            for(var item in $scope.mylist){
+                $scope.mylist[item].ischecked = $scope.isCheckAll;
+            }
+        }
+        //单选
+        $scope.singleCheck = function(index){
+            $scope.mylist[index].ischecked = !$scope.mylist[index].ischecked;
+            //如果全选为true 单选为false
+            if($scope.isCheckAll && !$scope.mylist[index].ischecked){
+                $scope.isCheckAll = !$scope.isCheckAll;
+            }else
+            //全选为false， 如果单选为true 改变全选值
+            if(!$scope.isCheckAll){
+                var flag = true;
+                angular.forEach($scope.mylist,function(value,key){
+                    if(!value.ischecked){
+                        flag = false;
+                    }
+                });
+                if(flag){
+                    $scope.isCheckAll = true;
+                }
+            }
+        }
+    })
+</script>
+</html>

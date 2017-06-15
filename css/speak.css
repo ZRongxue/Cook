@@ -1,0 +1,52 @@
+.z_con {
+    width: 100%;
+}
+
+.z_con h3 {
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+    line-height: 44px;
+    color: #666666;
+    font-size: 18px;
+    text-indent: 0.7rem;
+}
+
+.z_con ul {
+    width: 100%;
+    padding: 2%;
+    margin: 0;
+}
+
+.z_con ul li {
+    display: flex;
+}
+
+.z_con ul li div:nth-of-type(1) {
+    width: 22%;
+}
+
+.z_con ul li div:nth-of-type(1) img {
+    width: 100%;
+}
+
+.z_con ul li div:nth-of-type(2) {
+    width: 78%;
+    padding: 1% 3%;
+}
+
+.z_con ul li div:nth-of-type(2) p:nth-of-type(1) {
+    font-size: 1.8rem;
+    color: #333333;
+    line-height: 2.4rem;
+}
+
+.z_con ul li div:nth-of-type(2) p:nth-of-type(2) {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 2rem;
+}
+.on{
+    color: #ff6600 !important;
+}
+
+/*# sourceMappingURL=speak.css.map */

@@ -1,0 +1,25 @@
+a {
+    text-decoration: none;
+    color: #333;
+}
+.L_YhgHeader {
+    background: white;
+    font-size: 2rem;
+    font-family: "Microsoft YaHei";
+    padding: 0.8rem;
+}
+.L_YhgHeader .L_YhgHeaderNav .L_YhgHeaderRtn {
+    display: block;
+    position: absolute;
+}
+.L_YhgHeader .L_YhgHeaderNav .L_YhgHeaderTitle {
+    margin: 0 32%;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+    word-wrap: normal;
+    /*text-overflow: ellipsis;*/
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+}

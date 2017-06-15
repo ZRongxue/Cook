@@ -1,0 +1,40 @@
+<link href="css/food.css" rel="stylesheet">
+<link href="css/speak.css" rel="stylesheet">
+<div class="z_box" style="padding-bottom: 4rem">
+    <div class="z_banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" ng-repeat="banner in data.speak[0].lb"><img ng-src="{{banner.img}}"/></div>
+            </div>
+        </div>
+    </div>
+    <div class="z_list">
+        <ul>
+            <li ng-repeat="item in data.speak[0].list">
+                <a href="{{item.href}}.html">
+                    <img ng-src="{{item.img}}">
+                    <p ng-bind="item.txt"></p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="z_con">
+        <h3>功效</h3>
+        <ul>
+            <li ng-repeat="item in data.speak[0].con">
+                <div>
+                    <img ng-src="{{item.img}}">
+                </div>
+
+                <div>
+                    <p ng-bind="item.tit"></p>
+                    <p ng-bind="item.info" class="huan"></p>
+                    <p class="text-muted clearfix" >
+                        <span ng-bind="item.time" class="pull-left"></span>
+                        <span ng-bind="item.zan" class="pull-right am-icon-thumbs-o-up" ng-click="dian($index)" ng-class="{on:item.onrange}"></span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

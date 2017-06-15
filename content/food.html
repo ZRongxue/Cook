@@ -1,0 +1,48 @@
+<link href="css/food.css" rel="stylesheet">
+<div class="z_box">
+    <div class="nav navbar-text none" style="margin: 0">
+        <ul>
+            <!--<li><span class="am-icon-share-alt"></span></li>-->
+            <li><a href="content/search.html"><input type="text" placeholder="请输入要搜索的商品" readonly></a></li>
+            <!--<li><span class="am-icon-comment"></span></li>-->
+        </ul>
+    </div>
+    <div class="z_banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" ng-repeat="banner in data.food[0].lb"><img ng-src="{{banner.img}}"/></div>
+            </div>
+        </div>
+    </div>
+    <div class="z_list">
+        <ul>
+            <li ng-repeat="item in data.food[0].list">
+                <a href="{{item.href}}.html">
+                    <img ng-src="{{item.img}}">
+                    <p ng-bind="item.txt"></p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="z_food">
+        <div class="z_title clearfix">
+            <span>积分菜品</span>
+            <a>more》</a>
+        </div>
+    </div>
+    <div class="z_food_list">
+        <ul>
+            <li ng-repeat="item in data.food[0].food_list">
+                <a href="{{item.href}}.html">
+                    <img ng-src="{{item.img}}">
+                    <p ng-bind="item.name"></p>
+                    <p>
+                        <span ng-bind="item.price | currency:'￥'"></span>
+                        <span class="am-icon-cart-plus"></span>
+                    </p>
+                </a>
+
+            </li>
+        </ul>
+    </div>
+</div>

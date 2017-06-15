@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html, body {
+    font-size: 62.5%;
+    font-family: "Î¢ÈíÑÅºÚ";
+}
+
+.clearfix:after {
+    content: "";
+    height: 0;
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+
+ol, ul {
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+a{
+    color: #333333;
+    text-decoration: none;
+}
+a:active{
+    color: #333333;
+    text-decoration: none;
+}
+a:visited{
+    color: #333333;
+    text-decoration: none;
+}
+.z_box {
+    width: 100%;
+    padding-bottom: 28px;
+}
+.swiper-slide{
+    width: 100%;
+}
+.swiper-slide img{
+    width: 100%;
+}
+.huan{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

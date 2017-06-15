@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>收货地址</title>
+    <meta name="description" content="厨房妈妈"/>
+    <meta name="keywords" content="厨房妈妈"/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../css/Lheader.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/address.css"/>
+    <link rel="stylesheet" href="../css/amazeui.min.css"/>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/angular-1.4.6.min.js"></script>
+</head>
+<body style="background: #fafafa;" ng-controller="myctrl">
+<header class="L_YhgHeader">
+    <div class="L_YhgHeaderNav">
+        <a href="../index.html#/wo" class="L_YhgHeaderRtn"><span style="color: #333;" class="am-header-icon am-icon-angle-left"></span></a>
+        <a class="L_YhgHeaderTitle" style="color: #333;">收货地址</a>
+    </div>
+</header>
+<ul class="L_AddContent" >
+    <li ng-repeat="user in myUser" ng-class="{on:user.class}">
+        <p>收货人：{{user.name}}&nbsp;&nbsp;&nbsp;电话：{{user.num}}</p>
+        <p class="">收货地址：<small style="color: #bbb" ng-bind="user.address"></small></p>
+        <hr>
+        <div>
+            <label class="">
+                <input type="radio" name="radio" value="" ng-click="checked($index)"  ng-checked="user.che"><span class="am-ucheck-icons"><i class="am-icon-unchecked"></i><i class="am-icon-checked"></i></span> 设为默认
+            </label>
+            <button ng-click="edit($index)"><img src="../img/bj.png" style="width: 18px;">&nbsp;编辑</button>
+            <button ng-click="delete($index)">删除</button>
+        </div>
+    </li>
+</ul>
+
+<div class="L_bianji" ng-show="myEdit">
+    <header class="L_YhgHeader">
+        <div class="L_YhgHeaderNav">
+            <a class="L_YhgHeaderRtn" ng-click="hide()"><span style="color: #333;" class="am-header-icon am-icon-angle-left"></span></a>
+            <a class="L_YhgHeaderTitle" style="color: #333;">修改地址</a>
+        </div>
+    </header>
+    <div class="info">
+        <p>收货人：<input type="text" ng-model="names"/></p>
+        <p>电&nbsp;&nbsp;&nbsp;&nbsp;话：<input type="text" ng-model="nums"/></p>
+        <p>地&nbsp;&nbsp;&nbsp;&nbsp;址：<textarea rows="6" ng-model="texts"></textarea> </p>
+        <p><button ng-click="hide()">确定</button></p>
+    </div>
+
+</div>
+</body>
+<script>
+    var app = angular.module("app",[]);
+    app.controller("myctrl",function($scope){
+        $scope.myUser=[
+            {"name":"安女士","num":"15311335588","address":"河北省廊坊市 青云谱区解放西路258号河北省廊坊市 青云谱区解放西路258号","class":true,"che":true},
+            {"name":"安女士","num":"15311335588","address":"河北省廊坊市 青云谱区解放西路258号河北省廊坊市 青云谱区解放西路258号","class":false},
+            {"name":"安女士","num":"15311335588","address":"河北省廊坊市 青云谱区解放西路258号河北省廊坊市 青云谱区解放西路258号","class":false},
+            {"name":"安女士","num":"15311335588","address":"河北省廊坊市 青云谱区解放西路258号河北省廊坊市 青云谱区解放西路258号","class":false}
+        ];
+
+        //删除
+        $scope.delete=function(index){
+            $scope.myUser.splice(index,1)
+        };
+        //选中
+        $scope.checked=function(index){
+            angular.forEach($scope.myUser,function(key,value){
+                key.class = false;
+            });
+            $scope.myUser[index].class = true;
+        };
+        //编辑
+
+        $scope.edit=function(index){
+            $scope.index = index;
+            $scope.myEdit = true
+        };
+        $scope.hide=function(){
+            $scope.myEdit = false;
+            $scope.myUser[$scope.index].name = $scope.names;
+            $scope.myUser[$scope.index].num = $scope.nums;
+            $scope.myUser[$scope.index].address = $scope.texts;
+        }
+    })
+</script>
+</html>

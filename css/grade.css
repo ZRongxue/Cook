@@ -1,0 +1,23 @@
+.z_grade_info{
+    width: 100%;
+    /*margin-top: 2rem;*/
+    padding: 3%;
+}
+.z_grade_info p{
+    font-size: 1.4rem;
+}
+.z_grade_info p input{
+    width: 50%;
+    border: 1px solid #f0f0f0;
+}
+.z_grade_info button{
+    width: 5rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: white;
+    background: #ff6600;
+    line-height: 2rem;
+    border: 0;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
